@@ -62,9 +62,9 @@ def handle_command(command, channel):
     # Finds and executes the given command, filling in response
     response = None
     # This is where you start to implement more commands!
-    if command[0].lower() == COMMAND_LIST[0]:
+    if command[0].lower() == COMMAND_LIST[0] or command[0][0].lower() == COMMAND_LIST[0][0]:
         response = league.getLeaderBoard()
-    elif command[0].lower() == COMMAND_LIST[1]:
+    elif command[0].lower() == COMMAND_LIST[1] or command[0][0].lower() == COMMAND_LIST[1][0]:
         response = match(command[1:])
 
     # Sends the response back to the channel
