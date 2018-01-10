@@ -1,6 +1,8 @@
 # MarioKartELO
 Slackbot to rank players in Mario Kart based on their points at the end of a grand prix.
 
+Inspired by: https://github.com/jacob-l/playerratings
+
 # How to setup
 Create a slackbot and paste the Bot ID Token in slackbot.py: 
 
