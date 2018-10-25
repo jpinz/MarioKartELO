@@ -55,8 +55,8 @@ class League:
             if player in game.getResults():
                 player.add_game()
             self.cursor.execute("INSERT INTO ladder (name, elo, position, points, games_played)"
-                                " VALUES (%s, %s, %s, %s, %s) ON CONFLICT(name) DO UPDATE "
-                                "SET elo = %s, position = %s,  points = %s, games_played = %s",
+                                " VALUES (?, ?, ?, ?, ?) ON CONFLICT(name) DO UPDATE "
+                                "SET elo = ?, position = ?,  points = ?, games_played = ?",
                                 (player.name, player.elo, player.position, player.points, player.games_played,
                                  player.name, player.elo, player.position, player.points, player.games_played))
 
