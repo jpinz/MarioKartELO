@@ -91,7 +91,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="4648" />
+          <entry key="Python" value="4651" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -100,7 +100,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="4654" />
+          <entry key="py" value="4657" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -112,11 +112,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elo_scoring.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="59" column="64" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+            <state relative-caret-position="408">
+              <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1540504837211" expanded="true" signature="268:1602" ph="..." />
+                <marker date="1540504909350" expanded="true" signature="268:1602" ph="..." />
               </folding>
             </state>
           </provider>
@@ -623,11 +623,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/elo_scoring.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="59" column="64" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+        <state relative-caret-position="408">
+          <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1540504837211" expanded="true" signature="268:1602" ph="..." />
+            <marker date="1540504909350" expanded="true" signature="268:1602" ph="..." />
           </folding>
         </state>
       </provider>

@@ -91,7 +91,7 @@ class ELOScoring:
                 player_a.elo) + "\n")
 
         # Now that calculations are done, change each player's elo
-        for player in leaderboard:
+        for player in results:
             player.add_points_to_elo(elo_change[player.name])
 
         return leaderboard
