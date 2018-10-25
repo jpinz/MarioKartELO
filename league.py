@@ -1,14 +1,17 @@
 from elo_scoring import ELOScoring
 from player import Player
 from string import Template
-import sqlite3
+import os
+import psycopg2
 
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 class League:
     leaderboard = []
     scoring = ELOScoring(16, 480)
 
-    conn = sqlite3.connect('ladder.db')
     c = conn.cursor()
 
     # Create table
