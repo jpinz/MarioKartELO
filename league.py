@@ -1,5 +1,6 @@
 from elo_scoring import ELOScoring
 from player import Player
+from string import Template
 import sqlite3
 
 
@@ -21,6 +22,22 @@ class League:
         leaderboard = ""
         for player in sorted(self.leaderboard, key=Player.get_elo, reverse=True):
             leaderboard += ("Position: {}, Name: {}, ELO: {}\n".format(player.position, player.name, player.elo))
+        return leaderboard
+
+    def getLeaderBoardFormatted(self):
+        t = Template(
+            '{"title": "${position}", "fields": [{"title": "Name","value": "${name}","short": true},{"title": "ELO", "value": "${score}", "short": true}]}')
+        leaderboard = '['
+        i = 1
+        length = len(self.leaderboard)
+        for player in sorted(self.leaderboard, key=Player.get_elo, reverse=True):
+
+            leaderboard += t.substitute(name=player.name, position=player.position, score=player.elo)
+            if i != length:
+                leaderboard += ','
+            i += 1
+
+        leaderboard += ']'
         return leaderboard
 
     def recordGame(self, game):

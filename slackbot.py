@@ -1,12 +1,14 @@
 import time
 import re
+import json
 from slackclient import SlackClient
 
 from game import Game
 from league import League
 
 # instantiate Slack client
-slack_client = SlackClient("your-token-here")
+
+slack_client = SlackClient("key here")
 # starterbot's user ID in Slack: value is assigned after the bot starts up
 starterbot_id = None
 
@@ -45,6 +47,9 @@ def parse_direct_mention(message_text):
 def match(params):
     round = Game()
     for i in range(0, len(params), 2):
+        if int(params[i+1]) > 60:
+            return "Can't have more than 60 points for a game. Please either divide to get score out of 60, or take the" \
+                   " score from every 4 games."
         round.addResult(params[i].title(), params[i+1])
 
     league.recordGame(round)
@@ -61,19 +66,36 @@ def handle_command(command, channel):
 
     # Finds and executes the given command, filling in response
     response = None
+    wantFormattedOutput = False
+    text = "Title"
     # This is where you start to implement more commands!
     if command[0].lower() == COMMAND_LIST[0] or command[0][0].lower() == COMMAND_LIST[0][0]:
         response = league.getLeaderBoard()
+        text = "Leaderboard"
     elif command[0].lower() == COMMAND_LIST[1] or command[0][0].lower() == COMMAND_LIST[1][0]:
         response = match(command[1:])
+        text = "Match"
+    print(response)
 
-    # Sends the response back to the channel
-    slack_client.api_call(
-        "chat.postMessage",
-        channel=channel,
-        text=response or default_response
-    )
-
+    if wantFormattedOutput:
+        if response:
+            # Sends the response back to the channel
+            slack_client.api_call(
+                "chat.postMessage",
+                channel=channel,
+                text=text,
+                attachments=json.loads(response))
+        else:
+            slack_client.api_call(
+                "chat.postMessage",
+                channel=channel,
+                text=default_response)
+    else:
+        # Sends the response back to the channel
+        slack_client.api_call(
+            "chat.postMessage",
+            channel=channel,
+            text=response)
 
 if __name__ == "__main__":
     if slack_client.rtm_connect(with_team_state=False):
@@ -83,7 +105,8 @@ if __name__ == "__main__":
         while True:
             command, channel = parse_bot_commands(slack_client.rtm_read())
             if command:
-                handle_command(command.split(), channel)
+                if(channel == "CDMTQ45V0"): #If mariokart channel on tkezm
+                    handle_command(command.split(), channel)
             time.sleep(RTM_READ_DELAY)
     else:
         print("Connection failed. Exception traceback printed above.")
