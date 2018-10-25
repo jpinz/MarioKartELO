@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/league.py" beforeDir="false" afterPath="$PROJECT_DIR$/league.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,7 +91,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="1252" />
+          <entry key="Python" value="1265" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -99,7 +100,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="1258" />
+          <entry key="py" value="1271" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -120,12 +121,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="59" column="96" selection-start-line="59" selection-start-column="96" selection-end-line="59" selection-end-column="96" />
+            <state relative-caret-position="357">
+              <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1540478675262" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
-                <marker date="1540478675262" expanded="true" signature="1993:2124" ph="INSERT OR RE... ladder" />
+                <marker date="1540479208393" expanded="true" signature="390:513" ph="CREATE TABLE... stocks" />
+                <marker date="1540479208393" expanded="true" signature="1994:2126" ph="INSERT OR RE... ladder" />
               </folding>
             </state>
           </provider>
@@ -173,8 +174,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="-41">
+              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -227,9 +228,9 @@
         <option value="$PROJECT_DIR$/elo_scoring.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/slackbot.py" />
         <option value="$PROJECT_DIR$/Pipfile" />
+        <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/league.py" />
       </list>
     </option>
@@ -516,7 +517,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" weight="0.3298969" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.3621993" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3621993" />
       <window_info anchor="right" id="SciView" order="5" />
     </layout>
   </component>
@@ -590,27 +591,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="64" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -621,14 +605,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="59" column="96" selection-start-line="59" selection-start-column="96" selection-end-line="59" selection-end-column="96" />
+        <state relative-caret-position="357">
+          <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1540478675262" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
-            <marker date="1540478675262" expanded="true" signature="1993:2124" ph="INSERT OR RE... ladder" />
+            <marker date="1540479208393" expanded="true" signature="390:513" ph="CREATE TABLE... stocks" />
+            <marker date="1540479208393" expanded="true" signature="1994:2126" ph="INSERT OR RE... ladder" />
           </folding>
         </state>
       </provider>

@@ -13,6 +13,7 @@ class Game:
     def getMatchScores(self):
         scores = ""
         i = 1
+        print(self.players)
         for player, points in sorted(self.players.items(), reverse=True):
             scores += "{}: {} - {}\n".format(i, player, points)
             i += 1
