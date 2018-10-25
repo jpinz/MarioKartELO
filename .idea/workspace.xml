@@ -90,7 +90,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="1135" />
+          <entry key="Python" value="1148" />
           <entry key="SQL" value="5" />
         </counts>
       </usages-collector>
@@ -99,7 +99,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="1140" />
+          <entry key="py" value="1153" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -120,12 +120,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="57" column="84" selection-start-line="57" selection-start-column="84" selection-end-line="57" selection-end-column="84" />
+            <state relative-caret-position="299">
+              <caret line="58" column="112" selection-start-line="58" selection-start-column="112" selection-end-line="58" selection-end-column="112" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1540476913617" expanded="true" signature="365:487" ph="CREATE TABLE... stocks" />
-                <marker date="1540476913617" expanded="true" signature="1960:2093" ph="INSERT OR RE... ladder" />
+                <marker date="1540477231827" expanded="true" signature="365:487" ph="CREATE TABLE... stocks" />
+                <marker date="1540477231827" expanded="true" signature="1960:2093" ph="INSERT OR RE... ladder" />
               </folding>
             </state>
           </provider>
@@ -134,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/slackbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="-136">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
@@ -152,7 +152,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
+            <state relative-caret-position="17">
               <caret line="1" column="64" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="64" />
             </state>
           </provider>
@@ -590,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="1" column="64" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -607,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/slackbot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -621,14 +607,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slackbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="57" column="84" selection-start-line="57" selection-start-column="84" selection-end-line="57" selection-end-column="84" />
+        <state relative-caret-position="299">
+          <caret line="58" column="112" selection-start-line="58" selection-start-column="112" selection-end-line="58" selection-end-column="112" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1540476913617" expanded="true" signature="365:487" ph="CREATE TABLE... stocks" />
-            <marker date="1540476913617" expanded="true" signature="1960:2093" ph="INSERT OR RE... ladder" />
+            <marker date="1540477231827" expanded="true" signature="365:487" ph="CREATE TABLE... stocks" />
+            <marker date="1540477231827" expanded="true" signature="1960:2093" ph="INSERT OR RE... ladder" />
           </folding>
         </state>
       </provider>
