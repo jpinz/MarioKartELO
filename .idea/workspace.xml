@@ -90,7 +90,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="1244" />
+          <entry key="Python" value="1252" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -99,7 +99,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="1250" />
+          <entry key="py" value="1258" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -120,12 +120,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="61" column="112" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
+            <state relative-caret-position="299">
+              <caret line="59" column="96" selection-start-line="59" selection-start-column="96" selection-end-line="59" selection-end-column="96" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1540478509449" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
-                <marker date="1540478509449" expanded="true" signature="1993:2122" ph="INSERT OR RE... ladder" />
+                <marker date="1540478675262" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
+                <marker date="1540478675262" expanded="true" signature="1993:2124" ph="INSERT OR RE... ladder" />
               </folding>
             </state>
           </provider>
@@ -623,12 +623,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="61" column="112" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
+        <state relative-caret-position="299">
+          <caret line="59" column="96" selection-start-line="59" selection-start-column="96" selection-end-line="59" selection-end-column="96" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1540478509449" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
-            <marker date="1540478509449" expanded="true" signature="1993:2122" ph="INSERT OR RE... ladder" />
+            <marker date="1540478675262" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
+            <marker date="1540478675262" expanded="true" signature="1993:2124" ph="INSERT OR RE... ladder" />
           </folding>
         </state>
       </provider>
