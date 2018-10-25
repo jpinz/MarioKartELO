@@ -57,7 +57,7 @@ class ELOScoring:
             elo_change[player.name] = 0
 
         # Loop through each player and calculate their elo against the other players (with permutation)
-        for player_a, player_b in itertools.permutations(leaderboard, 2):
+        for player_a, player_b in itertools.permutations(results, 2):
             print("Player A: " + player_a.name + " vs. Player B: " + player_b.name)
 
             # Calculate the chance that Player A should win this game based on their elo
