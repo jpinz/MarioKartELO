@@ -4,19 +4,19 @@ import json
 from slackclient import SlackClient
 
 from game import Game
-from league import League
-# from league_sqlite import League
+# from league import League
+from league_sqlite import League
 
 # instantiate Slack client
 # tkezm xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh
 # testing xoxb-292507756724-aROyaerbZPfCnwc3gbwjdPTj
-slack_client = SlackClient("xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh")
+slack_client = SlackClient("xoxb-292507756724-aROyaerbZPfCnwc3gbwjdPTj")
 # starterbot's user ID in Slack: value is assigned after the bot starts up
 starterbot_id = None
 
 # constants
 RTM_READ_DELAY = 1  # 1 second delay between reading from RTM
-COMMAND_LIST = ("leaderboard", "match", "delete table", "delete", "update", "undo", "predict")
+COMMAND_LIST = ("leaderboard", "match", "deletetable", "update", "undo", "predict")
 MENTION_REGEX = "^<@(|[WU].+)>(.*)"
 
 league = League()
@@ -32,8 +32,8 @@ def parse_bot_commands(slack_events):
         if event["type"] == "message" and not "subtype" in event:
             user_id, message = parse_direct_mention(event["text"])
             if user_id == starterbot_id:
-                return message, event["channel"]
-    return None, None
+                return message, event["channel"], event["user"]
+    return None, None, None
 
 
 def parse_direct_mention(message_text):
@@ -66,7 +66,7 @@ def predict(params):
     return league.predict(round)
 
 
-def handle_command(command, channel):
+def handle_command(command, channel, user):
     """
         Executes bot command if the command is known
     """
@@ -84,11 +84,11 @@ def handle_command(command, channel):
     elif command[0].lower() == COMMAND_LIST[1] or command[0][0].lower() == COMMAND_LIST[1][0]:
         response = match(command[1:])
         text = "Match"
-    elif command[0].lower() == COMMAND_LIST[2]:
+    elif command[0].lower() == COMMAND_LIST[2] and (user == "U4AAX9J0Y" or user == "U8LJ5709K"):
         response = league.deleteTable()
-    elif command[0].lower() == COMMAND_LIST[3]:
-        response = "Not yet implemented - will eventually delete a user: " + command[1:]
-    elif command[0].lower() == COMMAND_LIST[6] or command[0][0].lower() == COMMAND_LIST[6][0]:
+    # elif command[0].lower() == COMMAND_LIST[3]:
+    #    response = "Not yet implemented - will eventually delete a user: " + command[1:]
+    elif command[0].lower() == COMMAND_LIST[5] or command[0][0].lower() == COMMAND_LIST[5][0]:
         response = predict(command[1:])
         text = "Prediction"
     print(response)
@@ -120,10 +120,11 @@ if __name__ == "__main__":
         # Read bot's user ID by calling Web API method `auth.test`
         starterbot_id = slack_client.api_call("auth.test")["user_id"]
         while True:
-            command, channel = parse_bot_commands(slack_client.rtm_read())
+            command, channel, user = parse_bot_commands(slack_client.rtm_read())
+            print(user)
             if command:
-                if channel == "CDMTQ45V0":  # If mariokart channel on tkezm
-                    handle_command(command.split(), channel)
+                # if channel == "CDMTQ45V0":  # If mariokart channel on tkezm
+                    handle_command(command.split(), channel, user)
             time.sleep(RTM_READ_DELAY)
     else:
         print("Connection failed. Exception traceback printed above.")

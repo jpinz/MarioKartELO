@@ -28,6 +28,10 @@ class League:
         leaderboard = ""
         for player in sorted(self.leaderboard, key=Player.get_elo, reverse=True):
             leaderboard += ("Position: {}, Name: {}, ELO: {}\n".format(player.position, player.name, player.elo))
+
+        if not leaderboard:
+            return "There isn't currently a leaderboard!"
+
         return leaderboard
 
     def getLeaderBoardFormatted(self):

@@ -9,19 +9,21 @@ class League:
     scoring = ELOScoring(96, 480)
 
     conn = sqlite3.connect('ladder.db')
-    c = conn.cursor()
+    cursor = conn.cursor()
 
     # Create table
-    c.execute('''CREATE TABLE IF NOT EXISTS ladder
+    cursor.execute('''CREATE TABLE IF NOT EXISTS ladder
                  (name TEXT UNIQUE, elo INT, position INT, points INT, games_played INT)''')
 
-    for row in c.execute('SELECT * FROM ladder ORDER BY position'):
+    for row in cursor.execute('SELECT * FROM ladder ORDER BY position'):
         leaderboard.append(Player(row[0], row[1], row[2], row[3], row[4]))
 
     def getLeaderBoard(self):
         leaderboard = ""
         for player in sorted(self.leaderboard, key=Player.get_elo, reverse=True):
             leaderboard += ("Position: {}, Name: {}, ELO: {}\n".format(player.position, player.name, player.elo))
+        if not leaderboard:
+            return "There isn't currently a leaderboard!"
         return leaderboard
 
     def getLeaderBoardFormatted(self):
@@ -48,8 +50,8 @@ class League:
             # Insert a row of data
             if player in game.getResults():
                 player.add_game()
-            self.c.execute("INSERT OR REPLACE INTO ladder VALUES (?, ?, ?, ?, ?)",
-                           [player.name, player.elo, player.position, player.points, player.games_played])
+            self.cursor.execute("INSERT OR REPLACE INTO ladder VALUES (?, ?, ?, ?, ?)",
+                                [player.name, player.elo, player.position, player.points, player.games_played])
 
         # Save (commit) the changes
         self.conn.commit()

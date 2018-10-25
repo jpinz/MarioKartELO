@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elo_scoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/elo_scoring.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/league.py" beforeDir="false" afterPath="$PROJECT_DIR$/league.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/league_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/league_sqlite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/slackbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/slackbot.py" afterDir="false" />
@@ -17,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MarioKartELO$calculator.coverage" NAME="calculator Coverage Results" MODIFIED="1512953881472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MarioKartELO$slackbot.coverage" NAME="slackbot Coverage Results" MODIFIED="1540503262087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MarioKartELO$slackbot.coverage" NAME="slackbot Coverage Results" MODIFIED="1540504334638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MarioKartELO$slackdialog.coverage" NAME="slackdialog Coverage Results" MODIFIED="1514590326350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MarioKartELO$test.coverage" NAME="test Coverage Results" MODIFIED="1514611567841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MarioKartELO$elo_scoring.coverage" NAME="elo_scoring Coverage Results" MODIFIED="1540501867838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -96,7 +93,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="4467" />
+          <entry key="Python" value="4641" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -105,7 +102,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="4473" />
+          <entry key="py" value="4647" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -127,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="374">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -151,17 +148,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/league_sqlite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="289">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="25" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/slackbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+            <state relative-caret-position="-1496">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -240,8 +237,8 @@
         <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/elo_scoring.py" />
         <option value="$PROJECT_DIR$/league_sqlite.py" />
-        <option value="$PROJECT_DIR$/league.py" />
         <option value="$PROJECT_DIR$/slackbot.py" />
+        <option value="$PROJECT_DIR$/league.py" />
       </list>
     </option>
   </component>
@@ -495,13 +492,13 @@
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15738831" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15738831" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32897863" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893157" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33729216" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33729216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39880952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -616,29 +613,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/slackbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1496">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/league_sqlite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="289">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="25" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="374">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/slackbot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
