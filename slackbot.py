@@ -5,7 +5,7 @@ from slackclient import SlackClient
 
 from game import Game
 from league import League
-#from league_sqlite import League
+# from league_sqlite import League
 
 # instantiate Slack client
 # tkezm xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh
@@ -16,7 +16,7 @@ starterbot_id = None
 
 # constants
 RTM_READ_DELAY = 1  # 1 second delay between reading from RTM
-COMMAND_LIST = ("leaderboard", "match")
+COMMAND_LIST = ("leaderboard", "match", "delete table", "delete", "update", "undo", "predict")
 MENTION_REGEX = "^<@(|[WU].+)>(.*)"
 
 league = League()
@@ -49,13 +49,21 @@ def parse_direct_mention(message_text):
 def match(params):
     round = Game()
     for i in range(0, len(params), 2):
-        if int(params[i+1]) > 60:
+        if int(params[i + 1]) > 60:
             return "Can't have more than 60 points for a game. Please either divide to get score out of 60, or take the" \
                    " score from every 4 games."
-        round.addResult(params[i], params[i+1])
+        round.addResult(params[i], params[i + 1])
 
     league.recordGame(round)
     return round.getMatchScores()
+
+
+def predict(params):
+    round = Game()
+    for i in range(0, len(params)):
+        round.addResult(params[i], -1)
+
+    return league.predict(round)
 
 
 def handle_command(command, channel):
@@ -76,6 +84,13 @@ def handle_command(command, channel):
     elif command[0].lower() == COMMAND_LIST[1] or command[0][0].lower() == COMMAND_LIST[1][0]:
         response = match(command[1:])
         text = "Match"
+    elif command[0].lower() == COMMAND_LIST[2]:
+        response = league.deleteTable()
+    elif command[0].lower() == COMMAND_LIST[3]:
+        response = "Not yet implemented - will eventually delete a user: " + command[1:]
+    elif command[0].lower() == COMMAND_LIST[6] or command[0][0].lower() == COMMAND_LIST[6][0]:
+        response = predict(command[1:])
+        text = "Prediction"
     print(response)
 
     if wantFormattedOutput:
@@ -98,6 +113,7 @@ def handle_command(command, channel):
             channel=channel,
             text=response or default_response)
 
+
 if __name__ == "__main__":
     if slack_client.rtm_connect(with_team_state=False):
         print("Starter Bot connected and running!")
@@ -106,7 +122,7 @@ if __name__ == "__main__":
         while True:
             command, channel = parse_bot_commands(slack_client.rtm_read())
             if command:
-                if(channel == "CDMTQ45V0"): #If mariokart channel on tkezm
+                if channel == "CDMTQ45V0":  # If mariokart channel on tkezm
                     handle_command(command.split(), channel)
             time.sleep(RTM_READ_DELAY)
     else:

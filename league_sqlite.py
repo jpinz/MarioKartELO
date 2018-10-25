@@ -53,3 +53,10 @@ class League:
 
         # Save (commit) the changes
         self.conn.commit()
+
+    def deleteTable(self):
+        self.cursor.execute("DROP TABLE IF EXISTS ladder")
+        return "Deleted the ladder."
+
+    def predict(self, game):
+        return self.scoring.predictScores(game, self.leaderboard)

@@ -7,6 +7,35 @@ class ELOScoring:
         self.max_rating_change = max_rating_change
         self.max_skill_gap = max_skill_gap
 
+    def predictScores(self, game, leaderboard=None):
+        # If this is the first run, there will be no leaderboard
+        if leaderboard is None:
+            return "There isn't yet a leaderboard!"
+        results = game.getResults()
+
+        scores = dict()
+        output = ""
+
+        # Get each player in the game
+        for player in results:
+            if player not in leaderboard:  # see if the player is new
+                return "Can't predict! {} isn't a valid person in the leaderboard.".format(player.name)
+            # Get the player's previous (current) elo before calculations are made
+            scores[player.name] = leaderboard[(leaderboard.index(player))].elo
+
+        for player_a, player_b in itertools.combinations(results, 2):
+            # Calculate the chance that Player A should win this game based on their elo
+            chance_of_player_a_winning = self.chance_of_winning(scores[player_a.name],
+                                                                scores[player_b.name])
+            print("Player A ELO: " + str(scores[player_a.name]))
+            print("Player B ELO: " + str(scores[player_b.name]))
+            print(chance_of_player_a_winning)
+
+            output += "There is a {0:.2%} chance that {1} will beat {2}.\n".format(
+                chance_of_player_a_winning, player_a.name, player_b.name)
+
+        return output
+
     def updateScores(self, game, leaderboard=None):
         # If this is the first run, there will be no leaderboard
         if leaderboard is None:
@@ -29,36 +58,37 @@ class ELOScoring:
 
         # Loop through each player and calculate their elo against the other players (with permutation)
         for player_a, player_b in itertools.permutations(leaderboard, 2):
-                print("Player A: " + player_a.name + " vs. Player B: " + player_b.name)
+            print("Player A: " + player_a.name + " vs. Player B: " + player_b.name)
 
-                # Calculate the chance that Player A should win this game based on their elo
-                chance_of_player_a_winning = self.chance_of_winning(previous_scores[player_a.name],
-                                                                    previous_scores[player_b.name])
-                # Don't change the elo if they tied
-                if self.players_draw(player_a, player_b):
-                    continue
+            # Calculate the chance that Player A should win this game based on their elo
+            chance_of_player_a_winning = self.chance_of_winning(previous_scores[player_a.name],
+                                                                previous_scores[player_b.name])
+            # Don't change the elo if they tied
+            if self.players_draw(player_a, player_b):
+                continue
 
-                # Did player A have a higher score than Player B
-                did_player_a_win = self.player_a_won(player_a, player_b)
+            # Did player A have a higher score than Player B
+            did_player_a_win = self.player_a_won(player_a, player_b)
 
-                # Calculate how much player A's elo should change based on their chances and if they won against B
-                adjusted_rating_change = self.rating_change(chance_of_player_a_winning, did_player_a_win, len(results))
+            # Calculate how much player A's elo should change based on their chances and if they won against B
+            adjusted_rating_change = self.rating_change(chance_of_player_a_winning, did_player_a_win, len(results))
 
-                print(player_a.name + " chance won: " + str(chance_of_player_a_winning) + " did win: " +
-                      str(did_player_a_win) + " adjusted rating change:" + str(adjusted_rating_change))
+            print(player_a.name + " chance won: " + str(chance_of_player_a_winning) + " did win: " +
+                  str(did_player_a_win) + " adjusted rating change:" + str(adjusted_rating_change))
 
-                integer_rating_change = round(adjusted_rating_change)  # round the score to change the elo
+            integer_rating_change = round(adjusted_rating_change)  # round the score to change the elo
 
-                if integer_rating_change == 0:  # if it's 0 when rounded, round to +/- 1
-                    if adjusted_rating_change > 0:
-                        integer_rating_change = 1
-                    elif adjusted_rating_change < 0:
-                        integer_rating_change = -1
+            if integer_rating_change == 0:  # if it's 0 when rounded, round to +/- 1
+                if adjusted_rating_change > 0:
+                    integer_rating_change = 1
+                elif adjusted_rating_change < 0:
+                    integer_rating_change = -1
 
-                elo_change[player_a.name] += integer_rating_change  # add the elo change to their net change in the dict
+            elo_change[player_a.name] += integer_rating_change  # add the elo change to their net change in the dict
 
-                print(player_a.name + " rating change " + str(elo_change[player_a.name]))
-                print("player_a new elo: " + str(player_a.elo + integer_rating_change) + " player_a: " + str(player_a.elo) + "\n")
+            print(player_a.name + " rating change " + str(elo_change[player_a.name]))
+            print("player_a new elo: " + str(player_a.elo + integer_rating_change) + " player_a: " + str(
+                player_a.elo) + "\n")
 
         # Now that calculations are done, change each player's elo
         for player in leaderboard:

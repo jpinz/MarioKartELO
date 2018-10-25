@@ -7,7 +7,6 @@ class Game:
         self.players = dict()
 
     def addResult(self, player, points):
-        print(player)
         self.players[player] = points
 
     def getMatchScores(self):
@@ -40,3 +39,7 @@ class Game:
         for player, points in self.players.items():
             players.append(Player(player, 1000, 0, points, 0))
         return players
+
+    def __str__(self):
+        for k, v in self.players.items():
+            print(k + " " + str(v))
