@@ -5,6 +5,7 @@ from slackclient import SlackClient
 
 from game import Game
 from league import League
+#from league_sqlite import League
 
 # instantiate Slack client
 # tkezm xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh
@@ -54,7 +55,6 @@ def match(params):
         round.addResult(params[i], params[i+1])
 
     league.recordGame(round)
-    print(round.getMatchScores())
     return round.getMatchScores()
 
 
@@ -96,7 +96,7 @@ def handle_command(command, channel):
         slack_client.api_call(
             "chat.postMessage",
             channel=channel,
-            text=response)
+            text=response or default_response)
 
 if __name__ == "__main__":
     if slack_client.rtm_connect(with_team_state=False):

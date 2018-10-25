@@ -1,27 +1,21 @@
 from elo_scoring import ELOScoring
 from player import Player
 from string import Template
-import os
-import psycopg2
-from psycopg2 import sql
+import sqlite3
 
 
 class League:
-    DATABASE_URL = os.environ['DATABASE_URL']
-
-    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-
     leaderboard = []
     scoring = ELOScoring(96, 480)
 
-    cursor = conn.cursor()
+    conn = sqlite3.connect('ladder.db')
+    c = conn.cursor()
 
     # Create table
-    cursor.execute('''CREATE TABLE IF NOT EXISTS ladder
+    c.execute('''CREATE TABLE IF NOT EXISTS ladder
                  (name TEXT UNIQUE, elo INT, position INT, points INT, games_played INT)''')
-    cursor.execute('SELECT * FROM ladder ORDER BY position')
-    for i in range(cursor.rowcount):
-        row = cursor.fetchone()
+
+    for row in c.execute('SELECT * FROM ladder ORDER BY position'):
         leaderboard.append(Player(row[0], row[1], row[2], row[3], row[4]))
 
     def getLeaderBoard(self):
@@ -32,8 +26,7 @@ class League:
 
     def getLeaderBoardFormatted(self):
         t = Template(
-            '{"title": "${position}", "fields": [{"title": "Name","value": "${name}","short": true},{"title": "ELO", '
-            '"value": "${score}", "short": true}]}')
+            '{"title": "${position}", "fields": [{"title": "Name","value": "${name}","short": true},{"title": "ELO", "value": "${score}", "short": true}]}')
         leaderboard = '['
         i = 1
         length = len(self.leaderboard)
@@ -55,11 +48,8 @@ class League:
             # Insert a row of data
             if player in game.getResults():
                 player.add_game()
-            self.cursor.execute(sql.SQL("INSERT INTO ladder (name, elo, position, points, games_played)"
-                                        " VALUES ('{0}', {1}, {2}, {3}, {4}) ON CONFLICT(name) DO UPDATE "
-                                        "SET elo={5}, position={6},  points={7}, games_played={8}".format(player.name,
-                                        int(player.elo), int(player.position), int(player.points), int(player.games_played),
-                                        int(player.elo), int(player.position), int(player.points), int(player.games_played))))
+            self.c.execute("INSERT OR REPLACE INTO ladder VALUES (?, ?, ?, ?, ?)",
+                           [player.name, player.elo, player.position, player.points, player.games_played])
 
         # Save (commit) the changes
         self.conn.commit()
