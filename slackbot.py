@@ -51,7 +51,7 @@ def match(params):
         if int(params[i+1]) > 60:
             return "Can't have more than 60 points for a game. Please either divide to get score out of 60, or take the" \
                    " score from every 4 games."
-        round.addResult(params[i].title(), params[i+1])
+        round.addResult(params[i], params[i+1])
 
     league.recordGame(round)
     print(round.getMatchScores())
