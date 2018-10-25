@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented" />
+    <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
+      <change beforePath="$PROJECT_DIR$/league.py" beforeDir="false" afterPath="$PROJECT_DIR$/league.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="1043" />
+          <entry key="Python" value="1108" />
+          <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -96,7 +99,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="1043" />
+          <entry key="py" value="1111" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -117,14 +120,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="163">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1540438539485" expanded="true" signature="346:468" ph="CREATE TABLE... stocks" />
-                <marker date="1540438539485" expanded="true" signature="500:530" ph="SELECT * FRO... ladder" />
-                <marker date="1540438539485" expanded="true" signature="500:538" ph="SELECT * FRO... ladder" />
-                <marker date="1540438539485" expanded="true" signature="1860:1912" ph="INSERT OR RE... ladder" />
+                <marker date="1540475303823" expanded="true" signature="369:491" ph="CREATE TABLE... stocks" />
+                <marker date="1540475303823" expanded="true" signature="1964:2089" ph="INSERT OR RE... ladder" />
               </folding>
             </state>
           </provider>
@@ -620,14 +621,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="163">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1540438539485" expanded="true" signature="346:468" ph="CREATE TABLE... stocks" />
-            <marker date="1540438539485" expanded="true" signature="500:530" ph="SELECT * FRO... ladder" />
-            <marker date="1540438539485" expanded="true" signature="500:538" ph="SELECT * FRO... ladder" />
-            <marker date="1540438539485" expanded="true" signature="1860:1912" ph="INSERT OR RE... ladder" />
+            <marker date="1540475303823" expanded="true" signature="369:491" ph="CREATE TABLE... stocks" />
+            <marker date="1540475303823" expanded="true" signature="1964:2089" ph="INSERT OR RE... ladder" />
           </folding>
         </state>
       </provider>

@@ -4,11 +4,12 @@ from string import Template
 import os
 import psycopg2
 
-DATABASE_URL = os.environ['DATABASE_URL']
-
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 class League:
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
     leaderboard = []
     scoring = ELOScoring(16, 480)
 
@@ -30,7 +31,8 @@ class League:
 
     def getLeaderBoardFormatted(self):
         t = Template(
-            '{"title": "${position}", "fields": [{"title": "Name","value": "${name}","short": true},{"title": "ELO", "value": "${score}", "short": true}]}')
+            '{"title": "${position}", "fields": [{"title": "Name","value": "${name}","short": true},{"title": "ELO", '
+            '"value": "${score}", "short": true}]}')
         leaderboard = '['
         i = 1
         length = len(self.leaderboard)
@@ -52,8 +54,11 @@ class League:
             # Insert a row of data
             if player in game.getResults():
                 player.add_game()
-            self.cursor.execute("INSERT OR REPLACE INTO ladder VALUES (?, ?, ?, ?, ?)",
-                                [player.name, player.elo, player.position, player.points, player.games_played])
+            self.cursor.execute("INSERT INTO ladder (name, elo, position, points, games_played)"
+                                " VALUES (%s, %s, %s, %s, %s) ON CONFLICT(name) DO UPDATE "
+                                "SET elo = %s, position = %s,  points = %s, games_played = %s",
+                                (player.name, player.elo, player.position, player.points, player.games_played,
+                                 player.name, player.elo, player.position, player.points, player.games_played))
 
         # Save (commit) the changes
         self.conn.commit()
