@@ -121,7 +121,6 @@ if __name__ == "__main__":
         starterbot_id = slack_client.api_call("auth.test")["user_id"]
         while True:
             command, channel, user = parse_bot_commands(slack_client.rtm_read())
-            print(user)
             if command:
                 # if channel == "CDMTQ45V0":  # If mariokart channel on tkezm
                     handle_command(command.split(), channel, user)

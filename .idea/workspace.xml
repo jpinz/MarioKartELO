@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
-      <change beforePath="$PROJECT_DIR$/league.py" beforeDir="false" afterPath="$PROJECT_DIR$/league.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/league_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/league_sqlite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/slackbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/slackbot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="221">
               <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -154,11 +152,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slackbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1496">
-              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            <state relative-caret-position="313">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -237,8 +235,8 @@
         <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/elo_scoring.py" />
         <option value="$PROJECT_DIR$/league_sqlite.py" />
-        <option value="$PROJECT_DIR$/slackbot.py" />
         <option value="$PROJECT_DIR$/league.py" />
+        <option value="$PROJECT_DIR$/slackbot.py" />
       </list>
     </option>
   </component>
@@ -498,13 +496,13 @@
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32897863" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893157" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33729216" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33729216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39880952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32897863" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32897863" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32857144" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3289941" />
       <window_info anchor="bottom" id="Database Console" order="11" weight="0.32897863" />
@@ -613,16 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/slackbot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1496">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/league_sqlite.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -632,10 +620,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="221">
           <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slackbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
