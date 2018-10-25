@@ -56,7 +56,9 @@ class League:
                 player.add_game()
             self.cursor.execute("INSERT INTO ladder (name, elo, position, points, games_played)"
                                 " VALUES (%(str)s, %(int)s, %(int)s, %(int)s, %(int)s) ON CONFLICT(name) DO UPDATE "
-                                "SET elo = %(str)s, position = %(int)s,  points = %(int)s, games_played = %(int)s", (player.name, int(player.elo), int(player.position), int(player.points), int(player.games_played), player.name, int(player.elo), int(player.position), int(player.points), int(player.games_played)))
+                                "SET elo = %(str)s, position = %(int)s,  points = %(int)s, games_played = %(int)s",
+                                [player.name, int(player.elo), int(player.position), int(player.points), int(player.games_played),
+                                 player.name, int(player.elo), int(player.position), int(player.points), int(player.games_played)])
 
         # Save (commit) the changes
         self.conn.commit()
