@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +75,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Pipfile" value="1" />
           <entry key="Procfile" value="1" />
           <entry key="ladder" value="1" />
           <entry key="py" value="1" />
@@ -82,19 +84,20 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="78" />
+          <entry key="PLAIN_TEXT" value="80" />
           <entry key="Python" value="1014" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Pipfile" value="2" />
           <entry key="Procfile" value="8" />
           <entry key="py" value="1014" />
           <entry key="txt" value="70" />
@@ -109,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/elo_scoring.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
-              <caret line="58" column="33" lean-forward="true" selection-start-line="58" selection-end-line="59" />
+              <caret line="58" column="33" selection-start-line="58" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -129,7 +132,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/slackbot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -137,6 +140,15 @@
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pipfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -220,6 +232,7 @@
         <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/slackbot.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/Pipfile" />
       </list>
     </option>
   </component>
@@ -276,7 +289,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SQL" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.project" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Julian\Google Drive\TKE\MarioKartELO" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -462,8 +480,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15738831" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15738831" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -474,7 +493,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32897863" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32897863" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32857144" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3289941" />
       <window_info anchor="bottom" id="Database Console" order="11" weight="0.32897863" />
@@ -547,7 +566,7 @@
     <entry file="file://$PROJECT_DIR$/elo_scoring.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
-          <caret line="58" column="33" lean-forward="true" selection-start-line="58" selection-end-line="59" />
+          <caret line="58" column="33" selection-start-line="58" selection-end-line="59" />
         </state>
       </provider>
     </entry>
@@ -595,6 +614,13 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
