@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/league.py" beforeDir="false" afterPath="$PROJECT_DIR$/league.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,7 +90,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="1183" />
+          <entry key="Python" value="1244" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -100,7 +99,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="1189" />
+          <entry key="py" value="1250" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -121,12 +120,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            <state relative-caret-position="333">
+              <caret line="61" column="112" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1540478105341" expanded="true" signature="365:487" ph="CREATE TABLE... stocks" />
-                <marker date="1540478105341" expanded="true" signature="1960:2093" ph="INSERT OR RE... ladder" />
+                <marker date="1540478509449" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
+                <marker date="1540478509449" expanded="true" signature="1993:2122" ph="INSERT OR RE... ladder" />
               </folding>
             </state>
           </provider>
@@ -624,12 +623,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        <state relative-caret-position="333">
+          <caret line="61" column="112" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1540478105341" expanded="true" signature="365:487" ph="CREATE TABLE... stocks" />
-            <marker date="1540478105341" expanded="true" signature="1960:2093" ph="INSERT OR RE... ladder" />
+            <marker date="1540478509449" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
+            <marker date="1540478509449" expanded="true" signature="1993:2122" ph="INSERT OR RE... ladder" />
           </folding>
         </state>
       </provider>

@@ -3,6 +3,7 @@ from player import Player
 from string import Template
 import os
 import psycopg2
+from psycopg2 import sql
 
 
 class League:
@@ -54,11 +55,11 @@ class League:
             # Insert a row of data
             if player in game.getResults():
                 player.add_game()
-            self.cursor.execute("INSERT INTO ladder (name, elo, position, points, games_played)"
-                                " VALUES (%(str)s, %(int)s, %(int)s, %(int)s, %(int)s) ON CONFLICT(name) DO UPDATE "
-                                "SET elo = %(str)s, position = %(int)s,  points = %(int)s, games_played = %(int)s",
-                                [player.name, int(player.elo), int(player.position), int(player.points), int(player.games_played),
-                                 player.name, int(player.elo), int(player.position), int(player.points), int(player.games_played)])
+            self.cursor.execute(sql.SQL("INSERT INTO ladder (name, elo, position, points, games_played)"
+                                        " VALUES ({0}, {1}, {2}, {3}, {4}) ON CONFLICT(name) DO UPDATE "
+                                        "SET elo={5}, position={6},  points={6}, games_played={7}".format(player.name,
+                                        int(player.elo), int(player.position), int(player.points), int(player.games_played),
+                                        player.name, int(player.elo), int(player.position), int(player.points), int(player.games_played))))
 
         # Save (commit) the changes
         self.conn.commit()
