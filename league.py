@@ -17,7 +17,7 @@ class League:
     cursor = conn.cursor()
 
     # Create table
-    cursor.execute('''CREATE TABLE IF NOT EXISTS laddert
+    cursor.execute('''CREATE TABLE IF NOT EXISTS ladder
                  (name TEXT UNIQUE, elo INT, position INT, points INT, games_played INT)''')
     cursor.execute('SELECT * FROM ladder ORDER BY position')
     for i in range(cursor.rowcount):
@@ -55,7 +55,7 @@ class League:
             # Insert a row of data
             if player in game.getResults():
                 player.add_game()
-            self.cursor.execute(sql.SQL("INSERT INTO laddert (name, elo, position, points, games_played)"
+            self.cursor.execute(sql.SQL("INSERT INTO ladder (name, elo, position, points, games_played)"
                                         " VALUES ('{0}', {1}, {2}, {3}, {4}) ON CONFLICT(name) DO UPDATE "
                                         "SET elo={5}, position={6},  points={7}, games_played={8}".format(player.name,
                                         int(player.elo), int(player.position), int(player.points), int(player.games_played),

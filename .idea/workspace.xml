@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/league.py" beforeDir="false" afterPath="$PROJECT_DIR$/league.py" afterDir="false" />
-    </list>
+    <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,12 +118,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
+            <state relative-caret-position="17">
+              <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1540479208393" expanded="true" signature="390:513" ph="CREATE TABLE... stocks" />
-                <marker date="1540479208393" expanded="true" signature="1994:2126" ph="INSERT OR RE... ladder" />
+                <marker date="1540479224245" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
+                <marker date="1540479224245" expanded="true" signature="1993:2124" ph="INSERT OR RE... ladder" />
               </folding>
             </state>
           </provider>
@@ -624,12 +621,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
+        <state relative-caret-position="17">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1540479208393" expanded="true" signature="390:513" ph="CREATE TABLE... stocks" />
-            <marker date="1540479208393" expanded="true" signature="1994:2126" ph="INSERT OR RE... ladder" />
+            <marker date="1540479224245" expanded="true" signature="390:512" ph="CREATE TABLE... stocks" />
+            <marker date="1540479224245" expanded="true" signature="1993:2124" ph="INSERT OR RE... ladder" />
           </folding>
         </state>
       </provider>
