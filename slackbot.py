@@ -4,13 +4,13 @@ import json
 from slackclient import SlackClient
 
 from game import Game
-# from league import League
-from league_sqlite import League
+from league import League
+# from league_sqlite import League
 
 # instantiate Slack client
 # tkezm xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh
 # testing xoxb-292507756724-aROyaerbZPfCnwc3gbwjdPTj
-slack_client = SlackClient("xoxb-292507756724-aROyaerbZPfCnwc3gbwjdPTj")
+slack_client = SlackClient("xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh")
 # starterbot's user ID in Slack: value is assigned after the bot starts up
 starterbot_id = None
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
         while True:
             command, channel, user = parse_bot_commands(slack_client.rtm_read())
             if command:
-                # if channel == "CDMTQ45V0":  # If mariokart channel on tkezm
+                if channel == "CDMTQ45V0":  # If mariokart channel on tkezm
                     handle_command(command.split(), channel, user)
             time.sleep(RTM_READ_DELAY)
     else:

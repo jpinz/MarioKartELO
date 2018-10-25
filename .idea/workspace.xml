@@ -91,7 +91,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="4641" />
+          <entry key="Python" value="4644" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -100,7 +100,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="4647" />
+          <entry key="py" value="4650" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -155,11 +155,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slackbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -630,11 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/slackbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
