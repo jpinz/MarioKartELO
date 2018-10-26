@@ -8,9 +8,8 @@ from league import League
 # from league_sqlite import League
 
 # instantiate Slack client
-# tkezm xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh
-# testing xoxb-292507756724-aROyaerbZPfCnwc3gbwjdPTj
-slack_client = SlackClient("xoxb-32580638016-463335718673-Z4VqRPPcdYmrH86qwHQaITPh")
+
+slack_client = SlackClient("token here")
 # starterbot's user ID in Slack: value is assigned after the bot starts up
 starterbot_id = None
 
