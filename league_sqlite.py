@@ -6,7 +6,7 @@ import sqlite3
 
 class League:
     leaderboard = []
-    scoring = ELOScoring(96, 480)
+    scoring = ELOScoring(32, 400)
 
     conn = sqlite3.connect('ladder.db')
     cursor = conn.cursor()

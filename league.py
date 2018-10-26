@@ -12,7 +12,7 @@ class League:
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
     leaderboard = []
-    scoring = ELOScoring(96, 480)
+    scoring = ELOScoring(32, 400)
 
     cursor = conn.cursor()
 
