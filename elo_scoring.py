@@ -2,6 +2,7 @@ from player import Player
 import itertools
 import math
 
+
 class ELOScoring:
     def __init__(self, max_rating_change, max_skill_gap):
         self.max_rating_change = max_rating_change
@@ -67,26 +68,31 @@ class ELOScoring:
 
             if did_player_a_win:
                 victory_multiplier = math.log(abs(int(player_a.points) - int(player_b.points)) + 1) * \
-                                     (2.2/((a_elo-b_elo)*0.001+2.2))
+                                     (2.2 / ((a_elo - b_elo) * 0.001 + 2.2))
             else:
-                victory_multiplier = math.log(abs(int(player_a.points) - int(player_b.points)) + 1) * \
-                                     (2.2/((b_elo-a_elo)*0.001+2.2))
+                victory_multiplier = math.log(abs(int(player_b.points) - int(player_a.points)) + 1) * \
+                                     (2.2 / ((b_elo - a_elo) * 0.001 + 2.2))
 
             print("Victory multiplier: " + str(victory_multiplier))
             # Calculate the chance that Player A should win this game based on their elo
             print(player_a.name + " - " + str(a_elo))
             print(player_b.name + " - " + str(b_elo))
             chance_of_player_a_winning = self.chance_of_winning(a_elo, b_elo)
+
+            tied = False
+
             # Don't change the elo if they tied
             if self.players_draw(player_a, player_b):
-                continue
+                victory_multiplier = 1
+                tied = True
 
             # Did player A have a higher score than Player B
             # print(player_a.name + " - " + str(player_a.points))
             # print(player_b.name + " - " + str(player_b.points))
 
             # Calculate how much player A's elo should change based on their chances and if they won against B
-            adjusted_rating_change = self.rating_change(chance_of_player_a_winning, did_player_a_win, len(results), victory_multiplier)
+            adjusted_rating_change = self.rating_change(chance_of_player_a_winning, did_player_a_win, len(results),
+                                                        victory_multiplier, tied)
 
             print(player_a.name + " chance won: " + str(chance_of_player_a_winning) + " did win: " +
                   str(did_player_a_win) + " adjusted rating change:" + str(adjusted_rating_change))
@@ -125,9 +131,14 @@ class ELOScoring:
 
     # ELO standard calculation to calculate Player A's chance of beating Player B
     def chance_of_winning(self, rating_a, rating_b):
-        return 1 / (1 + pow(10.0,  ((rating_b - rating_a) / self.max_skill_gap)))
+        return 1 / (1 + pow(10.0, ((rating_b - rating_a) / self.max_skill_gap)))
 
     # ELO standard calculation to calculate the change of Player A's elo based on outcome
-    def rating_change(self, expected_to_win, actually_won, total_players, victory_multiplier):
-        w = 1 if actually_won else 0
+    def rating_change(self, expected_to_win, actually_won, total_players, victory_multiplier, tied):
+        if actually_won and not tied:
+            w = 1
+        elif tied:
+            w = 0.5
+        else:
+            w = 0
         return (self.max_rating_change * victory_multiplier) * (w - expected_to_win) / (total_players - 1)

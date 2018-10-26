@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d3fbd10-3eb3-47a0-a2c4-35ab50869a12" name="Default" comment="Added formatted messages and stuff, not fully implemented">
       <change beforePath="$PROJECT_DIR$/elo_scoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/elo_scoring.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/league.py" beforeDir="false" afterPath="$PROJECT_DIR$/league.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/league_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/league_sqlite.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +91,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Python" value="5113" />
+          <entry key="Python" value="5175" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -102,7 +100,7 @@
         <counts>
           <entry key="Pipfile" value="10" />
           <entry key="Procfile" value="8" />
-          <entry key="py" value="5119" />
+          <entry key="py" value="5181" />
           <entry key="txt" value="70" />
         </counts>
       </usages-collector>
@@ -111,14 +109,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elo_scoring.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="381">
+              <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1540516070756" expanded="true" signature="279:1613" ph="..." />
+                <marker date="1540517129623" expanded="true" signature="279:1613" ph="..." />
               </folding>
             </state>
           </provider>
@@ -127,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/league.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-646">
+            <state relative-caret-position="-639">
               <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -158,10 +156,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/slackbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="1095">
               <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -241,8 +239,8 @@
         <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/league_sqlite.py" />
         <option value="$PROJECT_DIR$/league.py" />
-        <option value="$PROJECT_DIR$/elo_scoring.py" />
         <option value="$PROJECT_DIR$/slackbot.py" />
+        <option value="$PROJECT_DIR$/elo_scoring.py" />
       </list>
     </option>
   </component>
@@ -502,13 +500,13 @@
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32897863" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893157" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33729216" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33729216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39880952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32897863" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32897863" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32857144" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3289941" />
       <window_info anchor="bottom" id="Database Console" order="11" weight="0.32897863" />
@@ -599,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/league_sqlite.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-425">
@@ -617,9 +608,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/slackbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/league.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
+        <state relative-caret-position="-639">
           <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -629,21 +637,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/elo_scoring.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="381">
+          <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1540516070756" expanded="true" signature="279:1613" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/slackbot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1540517129623" expanded="true" signature="279:1613" ph="..." />
           </folding>
         </state>
       </provider>
